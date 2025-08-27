@@ -1,0 +1,111 @@
+/* Centering and spacing */
+body {
+    background: linear-gradient(135deg, #222f42, #1f3737);    /* light gray-blue for consistency */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background: linear-gradient(135deg, #0f3f7b, #1d4e5c);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ffe082 !important;
+}
+
+.nav-link {
+    color: #f1f1f1 !important;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* Container adjustment for spacing */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Main container */
+form {
+    border-radius: 12px;
+    padding: 2rem !important;
+    color: white;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.heading{
+    color: white;
+}
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #2e5465;
+    font-weight: bold;
+}
+
+/* Django form fields */
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #e6f0f3;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Submit button */
+button.btn {
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button.btn-primary {
+    background-color: #192a31;
+    border: none;
+}
+
+button.btn-primary:hover {
+    background-color: #070b0e;
+    transform: translateY(-2px);
+}

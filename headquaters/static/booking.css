@@ -1,0 +1,114 @@
+/* General Page Styling */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #222f42, #1f3737); 
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #0f3f7b, #1d4e5c);
+    padding: 2px , 5px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ffe082 !important;
+}
+
+.nav-link {
+    color: #f1f1f1 !important;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* Container adjustment for spacing */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* heading */
+.heading{
+    color: aliceblue;
+    text-align: center;
+    /* margin-bottom: 30px; */
+    font-weight: 600;
+}
+
+/* Booking Card */
+.booking-card {
+    background: black; /* elegant dark tones */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.doctor_list {
+    background: linear-gradient(135deg, #2c3645, #1b5d5d); /* elegant dark tones */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: rgb(255, 255, 255);
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+
+/* Labels & Values */
+.booking-card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #ffffff;  /* light text for contrast */
+}
+
+.booking-card strong {
+    color: #1abc9c; /* teal accent for labels */
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .booking-card {
+        padding: 15px;
+        margin: 10px;
+    }
+    .booking-card p {
+        font-size: 14px;
+    }
+}
+footer{
+  
+    color: rgb(255, 255, 255);
+}

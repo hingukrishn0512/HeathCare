@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}edit your slot{% endblock %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'edit.css' %}">{% endblock %}
+{% block content %}
+  <div>
+   <h1 class="heading"> Edit Your slot </h1>
+   {% comment %} form banavanu hoy whenever we want to edit or delete the object or substance {% endcomment %}
+   <form method="POST" class="p-4 shadow rounded" style="max-width: 600px; margin: auto; background-color:rgb(46, 84, 101);">
+    {% csrf_token %}
+    {{ editing.as_p }}    
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </form>
+</div>
+
+
+
+{% endblock %}

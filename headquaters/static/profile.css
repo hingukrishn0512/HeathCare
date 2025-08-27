@@ -1,0 +1,103 @@
+/* General Page Styling */
+body {
+     background: linear-gradient(135deg, #222f42, #1f3737); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fcfafa;
+}
+.navbar {
+    background: linear-gradient(135deg, #0f3f7b, #1d4e5c);
+    padding: 0.8rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ffe082 !important;
+}
+
+.nav-link {
+    color: #f1f1f1 !important;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* Container adjustment for spacing */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Card Container */
+.card {
+    background: #252879;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Profile Title */
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* Labels and Data */
+.card p {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+    line-height: 1.6;
+    border-bottom: 1px solid #131313;
+    padding-bottom: 0.4rem;
+}
+
+.card p strong {
+    color: #1a1616;
+    width: 140px;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        padding: 1.2rem;
+    }
+    .card h3 {
+        font-size: 1.3rem;
+    }
+    .card p {
+        font-size: 0.95rem;
+    }
+}

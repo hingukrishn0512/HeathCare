@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | HealthCare Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      animation: fadeInDown 1.5s ease-in-out;
+    }
+
+    .hero p {
+      margin: 20px 0;
+      font-size: 1.2rem;
+      font-weight: 300;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    /* Buttons */
+    .btn-container {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: white;
+    }
+
+    .btn-primary {
+      background: #00c6ff;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 198, 255, 0.6);
+    }
+
+    .btn-secondary {
+      background: #ff416c;
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 65, 108, 0.6);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Floating Circles for background effect */
+    .circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .circles li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+      border-radius: 50%;
+    }
+
+    .circles li:nth-child(1) {
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+
+    .circles li:nth-child(2) {
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+
+    .circles li:nth-child(3) {
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+    }
+
+    .circles li:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+    }
+
+    .circles li:nth-child(5) {
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+    }
+
+    .circles li:nth-child(6) {
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+    }
+
+    .circles li:nth-child(7) {
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+    }
+
+    .circles li:nth-child(8) {
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+    }
+
+    .circles li:nth-child(9) {
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+    }
+
+    .circles li:nth-child(10) {
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Welcome to HealthCare Portal</h1>
+    <p>Your trusted platform to book appointments with doctors easily.</p>
+    <div class="btn-container">
+      <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+      <a href="{% url 'register' %}" class="btn btn-secondary">Register</a>
+    </div>
+  </section>
+
+  <!-- Floating Circles -->
+  <ul class="circles">
+    <li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li>
+  </ul>
+</body>
+</html>

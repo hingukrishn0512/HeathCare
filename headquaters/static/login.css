@@ -1,0 +1,94 @@
+/* General page background */
+/* General page background */
+body {
+     background: linear-gradient(135deg, #222f42, #1f3737); 
+     min-height: 100vh;
+     font-family: "Poppins", sans-serif;
+     margin: 0;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card styling */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 10px,10px;
+    margin-top: 15vh;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading */
+.card h3 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Input fields */
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+.form-control:focus {
+    border-color: #5A67D8;
+    box-shadow: 0 0 8px rgba(90, 103, 216, 0.4);
+    outline: none;
+}
+
+/* Labels */
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Button */
+.btn-primary {
+    background: linear-gradient(90deg, #5A67D8, #667EEA);
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #4C51BF, #5A67D8);
+    transform: scale(1.03);
+}
+
+/* Register link */
+p a {
+    text-decoration: none;
+    color: #5A67D8;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+p a:hover {
+    color: #2B6CB0;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

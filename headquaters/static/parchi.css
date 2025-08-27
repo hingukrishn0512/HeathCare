@@ -1,0 +1,135 @@
+/* prescription.css */
+
+/* General Layout */
+body {
+      background: linear-gradient(135deg, #222f42, #1f3737); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Navbar Buttons */
+.navbar {
+    background: linear-gradient(135deg, #0f3f7b, #1d4e5c);
+    padding: 2px , 5px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ffe082 !important;
+}
+
+.nav-link {
+    color: #f1f1f1 !important;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* Container adjustment for spacing */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Centered form card */
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+.card h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+/* Form styling */
+form {
+    margin-top: 1rem;
+}
+
+form label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #444;
+}
+
+form input, form select, form textarea {
+    border-radius: 8px !important;
+    border: 1px solid #ced4da;
+    padding: 10px 12px;
+    width: 100%;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Button styling */
+button.btn-primary {
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #003f88);
+    transform: translateY(-2px);
+}
+
+/* AI Output box */
+.bg-light {
+    border-left: 5px solid #007bff;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    border-radius: 8px;
+}
+
+.bg-light strong {
+    color: #0056b3;
+}

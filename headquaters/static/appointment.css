@@ -1,0 +1,130 @@
+/* Appointment Form Styling */
+body {
+     background: linear-gradient(135deg, #222f42, #1f3737); 
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.navbar {
+    background: linear-gradient(135deg, #0f3f7b, #1d4e5c);
+    padding: 2px , 5px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ffe082 !important;
+}
+
+.nav-link {
+    color: #f1f1f1 !important;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* Container adjustment for spacing */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card {
+    background: #fdfdfe;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1976d2;
+}
+
+/* Form Fields */
+form p {
+    margin-bottom: 1rem;
+}
+
+form input, 
+form select, 
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+form input:focus, 
+form select:focus, 
+form textarea:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 6px rgba(25, 118, 210, 0.3);
+}
+
+/* Error Message */
+.text-danger {
+    font-size: 0.9rem;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    color: #d32f2f;
+}
+
+/* Submit Button */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #1976d2, #42a5f5);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #1565c0, #1e88e5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(25, 118, 210, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+}

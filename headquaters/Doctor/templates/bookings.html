@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}bookings{% endblock %}
+    {% block style %}<link rel="stylesheet" href="{% static 'booking.css'%}">{% endblock %} 
+    
+</head>
+<body>
+    
+    
+    {% block content %}
+    <h2 class="heading">Your Bookings </h2>
+    
+
+      {% for items in book_patient %}
+      
+      
+          <div class="booking-card">
+              
+              <p><strong>doctor:</strong>{{items.doctor.user.username}}</p>
+              <p><strong>patient:</strong>{{items.patient.user.username}}</p>
+              <p><strong>date:</strong>{{items.date}}</p>
+              <p><strong>time:</strong>{{items.time}}</p>
+              <p><strong>symptoms:</strong>{{items.reason}}</p>
+            </div>
+        
+    
+    {% endfor %}
+   
+     {% if book_doctor %}
+        {% for items in book_doctor %}    
+        <div class="doctor_list">
+
+            <p><strong>patient:</strong>{{items.patient.user.username}}</p>
+            <p><strong>date:</strong>{{items.date}}</p>
+            <p><strong>time:</strong>{{items.time}}</p>
+            <p><strong>symptoms:</strong>{{items.reason}}</p>
+        </div>    
+        {% endfor %}
+
+     {% endif %}
+    
+     
+     {% endblock %}
+    </body>
+    
+    </html>

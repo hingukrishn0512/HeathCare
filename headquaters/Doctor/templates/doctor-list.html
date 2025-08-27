@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Doctors{% endblock %}
+    {% block style %}<link rel="stylesheet" href="{% static 'doctor-list.css'%}">{% endblock %} 
+
+{% block content %}
+<div class="card p-4 shadow-sm">
+    <h2 class="mb-3">Doctor List</h2>
+    <table class="table table-hover table-bordered">
+        <thead class="table-primary">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Specialization</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doc in all_list %}
+            <tr>
+                <td>{{ doc.user.username }}</td>
+                <td>{{ doc.age }}</td>
+                <td>{{ doc.specialization }}</td>
+                <td>{{ doc.phone_number }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

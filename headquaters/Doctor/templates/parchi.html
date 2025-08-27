@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}New Prescription{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'parchi.css'%}">{% endblock %} 
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card p-4">
+            <h2>Create Prescription</h2>
+            <h3>Enter all your details</h3>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Generate</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% if ai_output %}
+  <div class="card mt-4 p-4 bg-light">
+    <p><strong>{{ai_output | safe}}</strong></p>   
+    {% comment %} safe is the filter for the better output {% endcomment %}
+  </div>
+
+
+{% endif %}
+{% endblock %}

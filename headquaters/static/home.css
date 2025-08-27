@@ -1,0 +1,110 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #002b36, #073642);
+    color: #fff;
+}
+
+/* Container for all doctors */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+.navbar {
+    background: linear-gradient(135deg, #0f3f7b, #1d4e5c);
+    padding: 2px , 5px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff !important;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ffe082 !important;
+}
+
+.nav-link {
+    color: #f1f1f1 !important;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* Container adjustment for spacing */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Each doctor card */
+.doctor-card {
+    background: #0a0a0a;
+    padding: 20px;
+    margin: 20px 0; /* spacing between cards */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Doctor details */
+.doctor-card p {
+    margin: 5px 0;
+    color: #ddd;
+}
+
+/* Booked / Book Slot buttons */
+.doctor-card button,
+.doctor-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.doctor-card button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+.doctor-card a:hover {
+    background: #218838;
+}
+
+/* Footer */
+footer {
+    background: #004466;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 0 0 12px 12px;
+}

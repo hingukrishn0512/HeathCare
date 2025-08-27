@@ -1,0 +1,50 @@
+/* thanks.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #2e5465, #3a7d8c);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 30px 50px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+a {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,94 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+   background: linear-gradient(135deg, #222f42, #1f3737); 
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.table th {
+  background: #3498db;
+  color: #fff;
+  font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+  background: #f1f7ff;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #2980b9;
+}
+
+/* Booking details (your earlier template) */
+.booking-details p {
+  background: #fff;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'profile.css'%}">{% endblock %} 
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card p-4">
+                        
+            <h3 class="text-center">{{ user.username }}'s Profile</h3>
+             <p><strong>Name:</strong> {{ user.username }}</p>
+             
+             
+             {% if doctor %}
+                 <p><strong>specialization:</strong> {{ doctor.specialization }}</p>
+                 <p><strong>Age:</strong> {{ doctor.age }}</p>
+                 <p><strong>Address:</strong> {{ doctor.address }}</p>
+                 <p><strong>Phone:</strong> {{ doctor.phone_number }}</p>
+                 <p><strong>Bio:</strong> {{ doctor.bio }}</p>
+                 <p><strong>experience_years:</strong> {{ doctor.experience_years }}</p>
+                 <p><strong>available_days:</strong> {{ doctor.available_days }}</p>
+             {% elif patient %}
+                 <p><strong>Age:</strong> {{ patient.age }}</p>
+                 <p><strong>Gender:</strong> {{ patient.gender }}</p>
+                 <p><strong>Address:</strong> {{ patient.address }}</p>
+                 <p><strong>Phone:</strong> {{ patient.phone_number }}</p>
+             {% endif %}
+
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
+       
+
+            
+

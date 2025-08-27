@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My HealthCare{% endblock %}</title>
+    {% block style %}
+      <link rel="stylesheet" href="{% static 'home.css'%}">
+    {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home'%}">My HealthCare</a>
+        <div>
+            <a class="nav-link d-inline-block" href="{% url 'profile' %}">Profile</a>
+            <a class="nav-link d-inline-block" href="{% url 'logout' %}">Logout</a>
+            <a class="nav-link d-inline-block" href="{% url 'booked' %}">My bookings</a> 
+            <a class="nav-link d-inline-block" href="{% url 'generator' %}">AI</a> 
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+<div class="container mt-4">
+    {% block content %}
+    
+    {% if sab_doctor %}
+        {% for items in sab_doctor %}
+        <div class="doctor-card">
+            <p><strong>Name:</strong> {{ items.user.username }}</p>
+            <p><strong>Specialization:</strong> {{ items.specialization }}</p>
+            <p><strong>Age:</strong> {{ items.age }}</p>
+            <p><strong>Address:</strong> {{ items.address }}</p>
+            <p><strong>Phone:</strong> {{ items.phone_number }}</p>
+            <p><strong>Bio:</strong> {{ items.bio }}</p>
+            <p><strong>Experience:</strong> {{ items.experience_years }} years</p>
+            <p><strong>Available Days:</strong> {{ items.available_days }}</p>
+
+            {% if items.id in booked_doctor %}
+                <button disabled class="book-btn">Booked</button>
+            {% else %}
+                <a href="{% url 'appointment' items.id %}" class="book-btn">Book Slot</a>
+            {% endif %}
+
+            {% if items.user == user %}
+                <a href="{% url 'edit' items.id %}" class="book-btn">Edit</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    {% else %}
+        <span class="text-muted">Doctor not available</span>
+    {% endif %}
+
+    {% endblock %}
+</div>
+
+<footer>
+    <p>© 2025 My HealthCare System</p>
+</footer>
+
+</body>
+</html>
